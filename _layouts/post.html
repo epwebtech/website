@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+      <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • <a href="#authorbioblock">{{ page.author }}</a>{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+  </header>
+
+  <article class="post-content">
+    {{ content }}
+  </article>
+    
+    <div id="authorbioblock" class="post-meta-footer group">
+    <h3>About the Author</h3>
+    <p>{% if page.authorphoto %}<img class="author-photo" src="{{ page.authorphoto }}" />{% endif %}{% if page.author %}<strong>{{ page.author }}</strong>{% endif %}{% if page.authorbio %} {{ page.authorbio }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+</div>
+
+</div>

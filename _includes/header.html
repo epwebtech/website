@@ -1,0 +1,19 @@
+    <header id="top-nav" class="group">
+        <div class="logo">
+            <a class="site-title" href="{{ site.baseurl }}/"><img src="/images/epwebtech-logo.png" alt="Eastern Panhandle Web Tech Meetup Group Logo" /></a>
+        </div>
+        <nav role="navigation">
+            <a href="#mobile-nav"><i class="icon-menu"></i></a>
+            <ul class="desktop">
+             {% for page in site.pages %}
+                  {% if page.title %}
+                 <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+                <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}"><i class="icon-rss"></i></a></li>
+                <li><a href="http://twitter.com/epwebtech"><i class="icon-twitter"></i></a></li>
+                <li><a href="https://github.com/epwebtech"><i class="icon-github"></i></a></li>
+                <li class="meetup"><a href="http://www.meetup.com/Panhandle-Web-Tech/"><i class="icon-meetup"></i></a></li>
+            </ul>
+        </nav>
+    </header>

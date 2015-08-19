@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<!--head.html include-->
+{% include head.html %}
+<!--head.html include-->
+
+<body>
+<!--header.html include-->
+    {% include header.html %}
+<!--header.html include--> 
+    
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+    
+<!--updates.html include-->
+    {% include updates.html %}
+<!--updates.html include-->
+
+<!--footer.html include-->
+    {% include footer.html %}
+<!--footer.html include-->
+</body>
+</html>

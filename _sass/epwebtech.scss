@@ -1,0 +1,423 @@
+/*
+Title:		Master styles for screen media
+Author: 	gbrad@firebrand-media.com
+*/
+
+@charset "UTF-8";
+
+// Default Variables
+$color-main: RGBA(31, 62, 160, 1); //BLUE
+$color-alt: RGBA(237, 214, 78, 1); //GOLD
+
+$width-desktop: 1100px;
+
+@mixin box-shadow {
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow:    0px 5px 10px 0px rgba(50, 50, 50, 0.75);
+    box-shadow:         0px 5px 10px 0px rgba(50, 50, 50, 0.75);
+}
+
+/* BASE STYLES
+-----------------------------*/
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 100%;
+    font-weight: 400;
+    border-top: 5px solid $color-main;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a:link {
+    color: $color-main;
+}
+
+a:visited {
+    color: $color-main;
+}
+
+a:hover {
+    color: RGBA(31, 62, 160, 0.6);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 5px 5%;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+    line-height: 1em;
+}
+
+p {
+    padding: 0 5%;
+}
+
+ul {
+    padding: 0 10%;
+}
+
+li {
+    padding: 7px 0;
+}
+
+@media screen and (min-width: $width-desktop) {
+    
+    p {
+        padding: 0;
+    }
+    
+    ul {
+        width: 70%;
+        margin: 0 auto;
+    }
+    
+    li {
+        padding: 7px 0;
+    }
+    
+    h2 {
+        width: 75%;
+        margin: 0 auto;
+    }
+}
+
+/* LAYOUT STYLES
+-----------------------------*/
+
+header {
+    border-bottom: 3px solid $color-alt;   
+}
+.desktop {
+    display: none;
+}
+
+.logo {
+    width: 85%;
+    float: left;
+}
+
+.icon-menu {
+    float: right;
+    border: 1px solid $color-main;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 9% 13px 0 0;
+}
+
+.welcome img {
+    border-bottom: 3px solid $color-main;
+}
+
+.welcome-hero {
+    background: url("/images/intro-to-git.jpg") top left no-repeat;
+    background-size: cover;
+    height: auto;
+    padding: 40px 0;
+    border-bottom: 3px solid $color-alt;
+}
+
+.welcome-hero img {
+    width: 100%;
+    height: auto;
+}
+
+.welcome-hero h1 {
+    margin: 0;
+    font-size: 500%;
+    color: #fff;
+    font-weight: 800;
+    text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+}
+
+code {
+    background-color: RGBA(246, 246, 246, 1);
+    padding: 5px;
+    color: $color-main;
+}
+
+.post-synopsis {
+    list-style-type: none;
+    padding: 10px 0;
+    margin: 0 5%;
+}
+
+.post-synopsis p {
+    padding: 0;
+}
+
+.post-meta-footer {
+    border-top: 1px solid $color-main;
+    border-bottom: 1px solid $color-main;
+}
+
+.post-meta-footer h3 {
+    border-bottom: 1px solid $color-alt;
+    font-size: 150%;
+    margin: 0;
+    padding: 10px 5%;
+}
+
+.author-photo {
+    border-radius: 100%;
+    float: left;
+    margin: 0 15px 0 0;
+    width: 70px;
+    height: auto;
+}
+
+.updates {
+
+}
+
+.updates h2 {
+    padding: 10px 5%;
+    margin: 0;
+    border-bottom: 1px solid $color-alt;
+}
+
+.updates ul {
+    padding: 0 5%;
+    margin: 0;
+}
+
+.updates li {
+    list-style-type: none;
+}
+
+footer {
+    background-color: $color-main;
+    border-top: 3px solid $color-alt;
+    color: #fff;
+    padding: 0;
+    margin: 40px 0 200% 0;
+    overflow: hidden;
+}
+
+footer a:link {
+    color: $color-alt;  
+    text-decoration: none;
+}
+
+footer a:visited {
+    color: $color-alt;   
+}
+
+footer a:hover {
+    color: #fff;   
+}
+
+
+footer ul {
+    padding: 0;
+    margin: 0;
+}
+
+footer li {
+    list-style-type: none;
+    padding: 7px 5%;
+    border-bottom: 1px solid $color-alt;
+}
+
+footer li.meetup {
+    background-color: red;
+}
+
+footer .meetup a {
+    color: #fff;
+}
+
+footer i {
+    float: right;
+}
+
+@media screen and (min-width: $width-desktop) {
+    
+    
+    .mobile {
+        display: none;
+    }
+    
+    .desktop {
+        display: inline;
+    }
+    
+    .icon-menu {
+        display: none;
+    }
+    
+    .logo {
+        width: 30%;
+        float: left;
+    }
+    
+    header {
+        background-color: #fff;
+        padding: 0 10%;
+    }
+    
+    nav {
+        float: right;
+        font-size: 120%;
+        width: 70%;
+        text-align: right;
+        margin: 3% 0 0 0;
+        padding: 0;
+    }
+    
+    nav a:link {
+        text-decoration: none;
+    }
+    
+    nav ul {
+        text-align: right;
+        padding: 0;
+        margin: 0;
+    }
+    
+    nav li {
+        display: inline;
+        padding: 0 10px 0 0;
+    }
+    
+    nav i {
+        
+    }
+    
+    .post-header {
+        padding: 10px 0;
+    }
+    
+    .post-title {
+        width: 75%;
+        margin: 0 auto;
+    }
+    
+    .post-meta {
+        width: 75%;
+        margin: 0 auto;
+    }
+    
+    .post-content {
+        width: 75%;
+        margin: 40px auto 20px auto;
+    }
+    
+    .post-content ul {
+        width: 90%;
+        padding: 0;
+    }
+    
+    .post-content h2 {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .post-synopsis {
+        list-style-type: none;
+        padding: 10px 0;
+        margin-left: 12.5%;
+    }
+    
+    .post-meta-footer {
+        width: 75%;
+        margin: 40px auto 20px auto;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    .post-meta-footer h3 {
+        border-bottom: 1px solid $color-main;
+        font-size: 150%;
+        margin: 0;
+        padding: 10px 0;
+    }
+    
+    .post-meta-footer strong {
+        display: block;
+    }
+
+    .author-photo {
+        border-radius: 100%;
+        float: left;
+        margin: 0 15px 0 0;
+        width: 100px;
+        height: auto;
+    }
+
+    
+    footer {
+        margin: 40px 0 0 0;
+    }
+    
+    .welcome-hero {
+        background: url("/images/intro-to-git.jpg") top left no-repeat;
+        background-size: cover;
+        height: auto;
+        padding: 40px 0;
+        margin: 0;
+        border-bottom: 3px solid $color-alt;
+    }
+    
+    .welcome-hero img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .welcome-hero h1 {
+        margin: 40px auto;
+        font-size: 800%;
+        color: #fff;
+        font-weight: 800;
+        text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+        width: 77%;
+    }
+    
+    .welcome p {
+        width: 75%;
+        margin: 0 auto;
+        padding: 15px 0;
+    }
+    
+    .welcome p:first-of-type {
+        padding: 40px 0 15px 0;   
+        font-size: 125%;
+    }
+    
+    .new-content {
+        width: 80%;
+        margin: 40px auto 0 auto;
+    }
+    
+    .updates {
+        width: 47%;
+        float: left;
+        padding: 0;
+        margin: 0 1%;
+        border: 1px solid $color-alt;
+        border-radius: 5px;
+    }
+    
+    .updates h2 {
+        margin: 0;
+        padding: 10px 0 10px 5%;
+        width: 95%;
+        background-color: $color-alt;
+        color: $color-main;
+    }
+
+}
+
+/* self-clear floats
+-----------------------------*/
+
+.group:after {
+	content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    }

@@ -1,0 +1,18 @@
+    <footer>
+        <nav id="mobile-nav" class="mobile">
+            <ul>
+                <li><a href="#top-nav">Top <i class="icon-top"></i></a></li>
+                {% for page in site.pages %}
+                  {% if page.title %}
+                 <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }} <i class="icon-{{ page.url | downcase | remove:'/' }}"></i></a></li>
+                {% endif %}
+            {% endfor %}
+                <li>Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS <i class="icon-rss"></i></a></li>
+                <li><a href="http://twitter.com/epwebtech">Follow us on Twitter <i class="icon-twitter"></i></a></li>
+                <li><a href="https://github.com/epwebtech">EP Web Tech on Github <i class="icon-github"></i></a></li>
+                <li class="meetup"><a href="http://www.meetup.com/Panhandle-Web-Tech/">EP Web Tech on Meetup <i class="icon-meetup"></i></a></li>
+            </ul>
+        </nav>
+        
+        <div class="copyright"></div>
+    </footer>
