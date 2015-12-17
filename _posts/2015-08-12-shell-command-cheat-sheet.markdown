@@ -3,7 +3,9 @@ layout: post
 title:  "Commonly Used SSH/Shell Commands (SSH Cheat Sheet)"
 date:   2015-08-12 14:18:50
 categories: blog
-website: "http://firebrand-media.com"
+author: "Brad Hopkins"
+authorbio: "I bought my first computer - an Apple Performa 6320 - when I was in college and have been building websites ever since. I like long walks in Illustrator and candle lit dinners with ExpressionEngine."
+authorphoto: "/images/bio-gbradhopkins.jpg"
 ---
 Here are some of the most commonly used SSH / Shell commands for those that are unfamiliar with using the command line. 
 

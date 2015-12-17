@@ -2,6 +2,9 @@
 layout: post
 title:  "Jekyll Links and Resources"
 date:   2015-08-17 18:18:50
+author: "Brad Hopkins"
+authorbio: "I bought my first computer - an Apple Performa 6320 - when I was in college and have been building websites ever since. I like long walks in Illustrator and candle lit dinners with ExpressionEngine."
+authorphoto: "/images/bio-gbradhopkins.jpg"
 categories: blog
 ---
 
