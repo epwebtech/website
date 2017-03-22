@@ -41,17 +41,15 @@ li {
 @media screen and (min-width: 1100px) {
   p {
     padding: 0; }
-
   ul {
     width: 70%;
     margin: 0 auto; }
-
   li {
     padding: 7px 0; }
-
   h2 {
     width: 75%;
     margin: 0 auto; } }
+
 /* LAYOUT STYLES
 -----------------------------*/
 header {
@@ -104,6 +102,11 @@ code {
 
 .post-synopsis p {
   padding: 0; }
+
+.audioplayer {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center; }
 
 .post-meta-footer {
   border-top: 1px solid RGBA(31, 62, 160, 1);
@@ -173,21 +176,16 @@ footer i {
 @media screen and (min-width: 1100px) {
   .mobile {
     display: none; }
-
   .desktop {
     display: inline; }
-
   .icon-menu {
     display: none; }
-
   .logo {
     width: 30%;
     float: left; }
-
   header {
     background-color: #fff;
     padding: 0 10%; }
-
   nav {
     float: right;
     font-size: 120%;
@@ -195,73 +193,57 @@ footer i {
     text-align: right;
     margin: 3% 0 0 0;
     padding: 0; }
-
   nav a:link {
     text-decoration: none; }
-
   nav ul {
     text-align: right;
     padding: 0;
     margin: 0; }
-
   nav li {
     display: inline;
     padding: 0 10px 0 0; }
-
   .post-header {
     padding: 10px 0; }
-
   .post-title {
     width: 75%;
     margin: 0 auto; }
-
   .post-meta {
     width: 75%;
     margin: 0 auto; }
-
   .post-content {
     width: 75%;
     margin: 40px auto 20px auto; }
-
   .post-content ul {
     width: 90%;
     padding: 0; }
-
   .post-content h2 {
     width: 100%;
     margin: 0;
     padding: 0; }
-
   .post-synopsis {
     list-style-type: none;
     padding: 10px 0;
     margin-left: 12.5%; }
-
   .post-meta-footer {
     width: 75%;
     margin: 40px auto 20px auto;
     border-top: none;
     border-bottom: none; }
-
   .post-meta-footer h3 {
     border-bottom: 1px solid RGBA(31, 62, 160, 1);
     font-size: 150%;
     margin: 0;
     padding: 10px 0; }
-
   .post-meta-footer strong {
     display: block; }
-
   .author-photo {
     border-radius: 100%;
     float: left;
     margin: 0 15px 0 0;
     width: 100px;
     height: auto; }
-
   footer {
     margin: 40px 0 0 0; }
-
   .welcome-hero {
     background: url("/images/intro-to-git.jpg") top left no-repeat;
     background-size: cover;
@@ -269,11 +251,9 @@ footer i {
     padding: 40px 0;
     margin: 0;
     border-bottom: 3px solid RGBA(237, 214, 78, 1); }
-
   .welcome-hero img {
     width: 100%;
     height: auto; }
-
   .welcome-hero h1 {
     margin: 40px auto;
     font-size: 800%;
@@ -281,20 +261,16 @@ footer i {
     font-weight: 800;
     text-shadow: 1px 1px 2px #969696;
     width: 77%; }
-
   .welcome p {
     width: 75%;
     margin: 0 auto;
     padding: 15px 0; }
-
   .welcome p:first-of-type {
     padding: 40px 0 15px 0;
     font-size: 125%; }
-
   .new-content {
     width: 80%;
     margin: 40px auto 0 auto; }
-
   .updates {
     width: 47%;
     float: left;
@@ -302,13 +278,13 @@ footer i {
     margin: 0 1%;
     border: 1px solid RGBA(237, 214, 78, 1);
     border-radius: 5px; }
-
   .updates h2 {
     margin: 0;
     padding: 10px 0 10px 5%;
     width: 95%;
     background-color: RGBA(237, 214, 78, 1);
     color: RGBA(31, 62, 160, 1); } }
+
 /* self-clear floats
 -----------------------------*/
 .group:after {
