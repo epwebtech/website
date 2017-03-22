@@ -11,12 +11,20 @@ layout: default
     {{ content }}
   </article>
     
+    <div id="authorbioblock" class="post-meta-footer group">
+    <h3>About the Speaker</h3>
+    <p>{% if page.authorphoto %}<img class="author-photo" src="{{ page.authorphoto }}" />{% endif %}{% if page.author %}<strong>{{ page.author }}</strong>{% endif %}{% if page.authorbio %} {{ page.authorbio }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+</div>
+
     <h2>Upcoming Events</h2>
 
                   <ul class="post-synopsis">
-                    {% for post in site.categories.events %}
-                      <li><a class="post-link" href="{{ post.url | prepend: site.baseurl }}"><strong>{{ post.title }}</strong></a> | <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} by {% if post.author %} | {{ post.author }}{% endif %}</span> {{ post.excerpt }}</li>
-                    {% endfor %}
+                    {% assign curDate = site.time | date: '%s' %}
+                        {% for post in site.categories.events %}
+                            {% assign postStartDate = post.date | date: '%s' %}
+                            {% if postStartDate >= curDate %}
+                                <li><a class="post-link" href="{{ post.url | prepend: site.baseurl }}"><strong>{{ post.title }}</strong></a> | <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} by {% if post.author %} | {{ post.author }}{% endif %}</span> {{ post.excerpt }}</li>
+                            {% endif %}
+                        {% endfor %}
                   </ul>
-
 </div>
